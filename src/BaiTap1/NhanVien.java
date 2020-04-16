@@ -6,99 +6,99 @@ package BaiTap1;
  */
 public class NhanVien 
 {
-    private String Ten;
-    private int Tuoi;
-    private String DiaChi;
-    private double TienLuong;
-    private int TongSoGioLam;
+    private String ten;
+    private int tuoi;
+    private String diaChi;
+    private double tienLuong;
+    private int tongSoGioLam;
     
   //constructor khong co tham so:===============================================
     public NhanVien()
     {}
     
   //constructor co tham so:=====================================================
-    public NhanVien(String Ten, int Tuoi, String DiaChi, double TienLuong, int TongSoGioLam)
+    public NhanVien(String ten, int tuoi, String diaChi, double tienLuong, int tongSoGioLam)
     {
-        this.Ten = Ten;
-        this.Tuoi = Tuoi;
-        this.DiaChi = DiaChi;
-        this.TienLuong = TienLuong;
-        this.TongSoGioLam = TongSoGioLam;
+        this.ten = ten;
+        this.tuoi = tuoi;
+        this.diaChi = diaChi;
+        this.tienLuong = tienLuong;
+        this.tongSoGioLam = tongSoGioLam;
     }
     
   //cac ham Set=================================================================
-    public void setTen(String Ten)
+    public void SetTen(String ten)
     {
-        this.Ten = Ten;
+        this.ten = ten;
     }
     
-    public void setTuoi(int Tuoi)
+    public void SetTuoi(int tuoi)
     {
-        this.Tuoi = Tuoi;
+        this.tuoi = tuoi;
     }
     
-    public void setDiaChi(String DiaChi)
+    public void SetDiaChi(String diaChi)
     {
-        this.DiaChi = DiaChi;
+        this.diaChi = diaChi;
     }
     
-    public void setTienLuong(double TienLuong)
+    public void SetTienLuong(double tienLuong)
     {
-        this.TienLuong = TienLuong;
+        this.tienLuong = tienLuong;
     }
     
-    public void setTongSoGioLam(int TongSoGioLam)
+    public void SetTongSoGioLam(int tongSoGioLam)
     {
-        this.TongSoGioLam = TongSoGioLam;
+        this.tongSoGioLam = tongSoGioLam;
     }
   //cac ham Get=================================================================
-    public String getTen()
+    public String GetTen()
     {
-        return Ten;
+        return ten;
     }
     
-    public int getTuoi()
+    public int GetTuoi()
     {
-        return Tuoi;
+        return tuoi;
     }
     
-    public String getDiaChi()
+    public String GetDiaChi()
     {
-        return DiaChi;
+        return diaChi;
     }
     
-    public double getTienLuong()
+    public double GetTienLuong()
     {
-        return TienLuong;
+        return tienLuong;
     }
     
-    public int getTongSoGioLam()
+    public int GetTongSoGioLam()
     {
-        return TongSoGioLam;
+        return tongSoGioLam;
     }
     
   //cac phuong thuc=============================================================
     public String getThongTin()
     {
-        return "Tên nhân viên: " + Ten + 
-            "\n Tuổi: " + Tuoi + 
-            "\n Địa chỉ: " + DiaChi +
-            "\n Tiền lương: " + TienLuong +
-            "\n Tổng số giờ làm: " + TongSoGioLam +
+        return "Tên nhân viên: " + ten + 
+            "\n Tuổi: " + tuoi + 
+            "\n Địa chỉ: " + diaChi +
+            "\n Tiền lương: " + tienLuong +
+            "\n Tổng số giờ làm: " + tongSoGioLam +
             "\n Tiền thưởng: " + tinhThuong();
     }
     
     public double tinhThuong()
     {
-        double TienThuong;
-        if(TongSoGioLam >= 200)
-            TienThuong = TienLuong * 20/100;
+        double tienThuong;
+        if(tongSoGioLam >= 200)
+            tienThuong = tienLuong * 20/100;
         else
         {
-            if(TongSoGioLam < 200 && TongSoGioLam >=100)
-                TienThuong = TienLuong * 10/100;
-            else TienThuong = 0;
+            if(tongSoGioLam < 200 && tongSoGioLam >=100)
+                tienThuong = tienLuong * 10/100;
+            else tienThuong = 0;
         }
-        return TienThuong;
+        return tienThuong;
     }
 }
